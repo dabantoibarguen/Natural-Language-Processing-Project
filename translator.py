@@ -28,7 +28,7 @@ trans = Translator()
 file = open("SPANISH_export_2018-07-04_train.json", "w")
 
 # Choose a language: (make lan en for English, es for Spanish, ar for Arabic)
-lan = 'fr'
+lan = 'es'
 
 count = 0
 for x in range(len(D)):
