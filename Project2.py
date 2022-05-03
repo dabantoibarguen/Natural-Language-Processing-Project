@@ -41,10 +41,10 @@ for i in range(len(corpuses)):
                 if(x<len(D)-1):
                     #sentences[temp].append(D[x+1]['dialog'][0]['text'].lower().strip())
                     
-                    p2 = ''
+                    
                     for k in range(len(D[x+1]['dialog'])):
-                        p2 = p2 + (D[x+1]['dialog'][k]['text'].lower().strip())
-                    sentences[temp].append(p2)
+                        #p2 = p2 + (D[x+1]['dialog'][k]['text'].lower().strip())
+                        sentences[temp].append(D[x+1]['dialog'][k]['text'].lower().strip())
                     
         '''
             if (D[x]['dialog'][i]['sender'] == 'participant2'):
