@@ -21,7 +21,7 @@ import sklearn
 
 
 
-D = json.load(open('export_2018-07-04_train.json'))
+D = json.load(open('FRENCH_export_2018-07-04_train.json'))
 print('Wait until it says ready, then type. Say bye to end.\n')
 sentences = dict()
 y = ''
