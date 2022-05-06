@@ -60,13 +60,9 @@ print('Wait until it says ready, then type. Say bye to end.\n')
 corpuses = []
 
 corpuses.append(first)
-D = json.load(open(corpuses[0]))
 corpuses.append(second)
-D = json.load(open(corpuses[1]))
 corpuses.append(third)
-D = json.load(open(corpuses[2]))
 corpuses.append(fourth)
-D = json.load(open(corpuses[3]))
 for i in range(len(corpuses)):
 
     D = json.load(open(corpuses[i]))
