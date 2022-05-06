@@ -19,12 +19,54 @@ from tqdm import tqdm
 from sklearn.svm import LinearSVC  
 import sklearn   
 
+
+first = ''
+second = ''
+third = ''
+fourth = ''
+
+while(true):
+    lan = input("Please choose a language (en for English, es for Spanish, fr for French): ")
+
+    if(lan.lower() == 'es' or lan.lower() == 'spanish'):
+        first = 'SPANISH_'
+        second = 'SPANISH_'
+        third = 'SPANISH_'
+        fourth = 'SPANISH_'
+        break
+    elif(lan.lower() == 'fr' or lan.lower() == 'french'):
+        first = 'FRENCH_'
+        second = 'FRENCH_'
+        third = 'FRENCH_'
+        fourth = 'FRENCH_'
+        break
+
+    elif(lan.lower() == 'en' or lan.lower() == 'english'):        
+        first = ''
+        second = ''
+        third = ''
+        fourth = ''
+        break
+    else:
+        print("please choose a valid language (en, es, fr): ")
+
+first += 'export_2018-07-04_train.json'
+second += 'export_2018-07-05_train.json'
+third += 'export_2018-07-06_train.json'
+fourth += 'export_2018-07-07_train.json'
+
+
 print('Wait until it says ready, then type. Say bye to end.\n')
 corpuses = []
-corpuses.append('/Users/jackdonovan/Desktop/NLP/NLP_Project/export_2018-07-04_train.json')
-corpuses.append('/Users/jackdonovan/Desktop/NLP/NLP_Project/export_2018-07-05_train.json')
-corpuses.append('/Users/jackdonovan/Desktop/NLP/NLP_Project/export_2018-07-06_train.json')
-corpuses.append('/Users/jackdonovan/Desktop/NLP/NLP_Project/export_2018-07-07_train.json')
+
+corpuses.append(first)
+D = json.load(open(corpuses[0]))
+corpuses.append(second)
+D = json.load(open(corpuses[1]))
+corpuses.append(third)
+D = json.load(open(corpuses[2]))
+corpuses.append(fourth)
+D = json.load(open(corpuses[3]))
 for i in range(len(corpuses)):
 
     D = json.load(open(corpuses[i]))
