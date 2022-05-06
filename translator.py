@@ -23,12 +23,12 @@ import sklearn
 from googletrans import Translator, constants
 
 
-D = json.load(open('export_2018-07-04_train.json'))
+D = json.load(open('export_2018-07-07_train.json'))
 trans = Translator()
-file = open("SPANISH_export_2018-07-04_train.json", "w")
+file = open("FRENCH_export_2018-07-07_train.json", "w")
 
 # Choose a language: (make lan en for English, es for Spanish, ar for Arabic)
-lan = 'es'
+lan = 'fr'
 
 count = 0
 for x in range(len(D)):
