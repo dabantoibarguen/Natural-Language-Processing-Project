@@ -56,7 +56,12 @@ third += 'export_2018-07-06_train.json'
 fourth += 'export_2018-07-07_train.json'
 
 
-print('Wait until it says ready, then type. Say bye to end.\n')
+if(lan == 'en'):
+    print('Wait until it says ready, then type. Say bye to end.\n')
+elif(lan == 'es'):
+    print('Wait until it says ready, then type. Say adios to end.\n')
+elif(lan == 'fr'):
+    print('Wait until it says ready, then type. Say au revoir to end.\n')
 corpuses = []
 
 corpuses.append(first)
@@ -107,7 +112,13 @@ loop = true
 print('Ready to Start\n')
 while(loop):
     userinput = input()
-    if userinput == 'bye':
+    if(lan == 'en' and userinput.lower() == 'bye'):
+        print('bot: Bye!')
+    elif(lan == 'es' and userinput.lower() == 'adios'):
+        print("bot: Adios!")
+        break
+    elif(lan == 'fr' and userinput.lower() == 'au revoir'):
+        print("bot: Au revoir!")
         break
     dis = cosine_distances(np.atleast_2d(word2vector(userinput)), W)
 
